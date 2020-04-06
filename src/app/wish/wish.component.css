@@ -1,0 +1,13 @@
+.card{
+     border: solid 2px purple;
+     background-color: #e8d7d7;
+ } 
+ h1{
+     color: purple;
+ }
+ .card-title{
+     text-align: center;
+ }
+ .card-body img{
+     border-radius: 2%;
+ }
