@@ -1,0 +1,17 @@
+<!-- <p>states-cities works!</p>
+ <ul *ngFor="let name of names">
+     <li>{{ name }}</li>
+ </ul>
+
+ <ul *ngFor="let person of persons">
+    <li>{{ person.name }} {{ person.age }}</li>
+ </ul> -->
+
+ <div class="container">
+    <accordion *ngFor="let state of states">
+    <accordion-group [heading] = "state.state">
+      {{ state.city }}
+    </accordion-group>
+</accordion>
+ </div>
+ 

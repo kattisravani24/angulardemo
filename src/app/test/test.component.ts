@@ -22,7 +22,7 @@ export class TestComponent implements OnInit {
     }, 5000);
     this.stopCounter = setInterval(()=>{
       this.counter++;
-      if(this.counter === 10){
+      if(this.counter === 10){ 
         this.stop();
       }
     }, 1000);
