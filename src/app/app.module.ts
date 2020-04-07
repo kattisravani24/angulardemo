@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 
 import { AppComponent } from './app.component';
@@ -12,7 +13,7 @@ import { StringInterpolationComponent } from './string-interpolation/string-inte
 import { ProprtyBindingComponent } from './proprty-binding/proprty-binding.component';
 import { WishComponent } from './wish/wish.component';
 import { StatesCitiesComponent } from './states-cities/states-cities.component';
-import { AccordionModule } from 'ngx-bootstrap/accordion';
+
 
 
 @NgModule({
