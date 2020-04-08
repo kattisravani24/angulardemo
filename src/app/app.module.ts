@@ -13,6 +13,7 @@ import { StringInterpolationComponent } from './string-interpolation/string-inte
 import { ProprtyBindingComponent } from './proprty-binding/proprty-binding.component';
 import { WishComponent } from './wish/wish.component';
 import { StatesCitiesComponent } from './states-cities/states-cities.component';
+import { NgClassEgComponent } from './ng-class-eg/ng-class-eg.component';
 
 
 
@@ -26,7 +27,8 @@ import { StatesCitiesComponent } from './states-cities/states-cities.component';
     StringInterpolationComponent,
     ProprtyBindingComponent,
     WishComponent,
-    StatesCitiesComponent
+    StatesCitiesComponent,
+    NgClassEgComponent
   ], 
   imports: [
     BrowserModule,

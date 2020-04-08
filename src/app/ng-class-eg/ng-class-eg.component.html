@@ -1,0 +1,40 @@
+<div [className]="'active'"></div>
+
+<!-- ngStyle Strats Here -->
+<p [ngStyle]="myStyles">Testing ngStyle for applying dynamic color</p>
+
+<ol>
+  <li *ngFor="let character of cartoon" [ngStyle]="{ color: cartoonColor }">
+    {{ character }}
+  </li>
+</ol>
+
+<!-- Applying styles using condition and for a particular element with bunch of styles-->
+<ul>
+  <li *ngFor="let item of movies" [ngStyle]="{ color: item.movie === 'Padem Kodi' ? 'green' : 'red' }">
+    <span [ngStyle]="myStyles">{{ item.name }}</span> - {{ item.movie }}
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let person of people" [ngStyle]="{ color: getColor(person.hobby) }" >
+    {{ person.name }} - {{ person.hobby }}
+  </li>
+</ul>
+
+<!-- Using style.proprty -->
+<!-- <ul>
+    <li *ngFor="let person of people" [style.background-color]="getColor(person.hobby)">{{person.name}} - {{person.hobby}}</li>
+</ul> -->
+<!-- *********************************************************************************** -->
+<!-- ngClass Strats Here -->
+<ul>
+  <li *ngFor="let person of people" [ngClass]="{ 'text-success': person.hobby === 'Dancing'}" [class.text-warning] = "person.hobby === 'Singing'">
+    {{ person.name }} - {{ person.hobby }}
+  </li>
+</ul>
+
+<!--  doing so will replace all the other classes of this li with text-info class -->
+<p class="class1 lass2" [class]="'text-info'">Doing so will replace all the other classes of this li with text-info class </p>
+
+<p  [class.text-success]="true">Sucess Paragraph</p>

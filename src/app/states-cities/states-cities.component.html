@@ -13,5 +13,12 @@
       {{ state.city }}
     </accordion-group>
 </accordion>
- </div>
+
+<p [ngStyle]="{color: myColor}" (click)="clicked()">My Para</p>
+
+  <div *ngFor="let car of cars" [ngClass]="{
+    'alert-primary':car.name === 'MG Hector',
+    'alert-secondary':car.name === 'Ford'
+  }">
+    {{ car.name }}
  
