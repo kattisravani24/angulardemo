@@ -14,6 +14,7 @@ import { ProprtyBindingComponent } from './proprty-binding/proprty-binding.compo
 import { WishComponent } from './wish/wish.component';
 import { StatesCitiesComponent } from './states-cities/states-cities.component';
 import { NgClassEgComponent } from './ng-class-eg/ng-class-eg.component';
+import { NgIfComponent } from './ng-if/ng-if.component';
 
 
 
@@ -28,7 +29,8 @@ import { NgClassEgComponent } from './ng-class-eg/ng-class-eg.component';
     ProprtyBindingComponent,
     WishComponent,
     StatesCitiesComponent,
-    NgClassEgComponent
+    NgClassEgComponent,
+    NgIfComponent
   ], 
   imports: [
     BrowserModule,

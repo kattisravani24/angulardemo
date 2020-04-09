@@ -1,0 +1,22 @@
+<h2 *ngIf="displayName">ng If - True</h2>
+<h2 *ngIf="hideName">ng If - False</h2>
+
+<!-- If else block -->
+<h3 *ngIf = "false;  else elseBlock">
+    If block
+</h3>
+
+<ng-template #elseBlock>
+    <h3>
+        Else block
+    </h3>
+</ng-template>
+
+<div *ngIf = "true; then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock>
+    <h3>If Block</h3>
+</ng-template>
+<ng-template #elseBlock>
+    <h3>Else Block</h3>
+</ng-template>

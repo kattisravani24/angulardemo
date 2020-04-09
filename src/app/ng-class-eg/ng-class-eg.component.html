@@ -21,7 +21,6 @@
     {{ person.name }} - {{ person.hobby }}
   </li>
 </ul>
-
 <!-- Using style.proprty -->
 <!-- <ul>
     <li *ngFor="let person of people" [style.background-color]="getColor(person.hobby)">{{person.name}} - {{person.hobby}}</li>
@@ -29,7 +28,7 @@
 <!-- *********************************************************************************** -->
 <!-- ngClass Strats Here -->
 <ul>
-  <li *ngFor="let person of people" [ngClass]="{ 'text-success': person.hobby === 'Dancing'}" [class.text-warning] = "person.hobby === 'Singing'">
+  <li *ngFor="let person of people" [ngClass]="{ 'text-success': person.hobby === 'Dancing', 'text-ifo': person.name === 'Aadya'}">  <!-- [class.text-warning] = "person.hobby === 'Singing'" -->
     {{ person.name }} - {{ person.hobby }}
   </li>
 </ul>
