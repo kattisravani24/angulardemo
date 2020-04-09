@@ -15,8 +15,7 @@ import { WishComponent } from './wish/wish.component';
 import { StatesCitiesComponent } from './states-cities/states-cities.component';
 import { NgClassEgComponent } from './ng-class-eg/ng-class-eg.component';
 import { NgIfComponent } from './ng-if/ng-if.component';
-
-
+import { NgSwitchComponent } from './ng-switch/ng-switch.component'
 
 @NgModule({
   declarations: [
@@ -30,7 +29,8 @@ import { NgIfComponent } from './ng-if/ng-if.component';
     WishComponent,
     StatesCitiesComponent,
     NgClassEgComponent,
-    NgIfComponent
+    NgIfComponent,
+    NgSwitchComponent
   ], 
   imports: [
     BrowserModule,
