@@ -1,0 +1,12 @@
+<!-- <child [pData] = "name"></child> -->
+
+<div *ngIf="!validLogin">
+<input type="text" id="#un" placeholder="Enter Username"><br>
+<input type="password" id="#pwd" placeholder="Enter Password"><br>
+
+<button (click) = "validateUser()">Login</button>
+</div>
+
+<div *ngIf="validLogin">
+    <child [userNameFromParent] = "username"></child>
+</div>

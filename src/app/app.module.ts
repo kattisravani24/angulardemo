@@ -20,6 +20,8 @@ import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { NgstyleComponent } from './ngStyle/ngstyle.component';
 import { EventbindingComponent } from './eventbinding/eventbinding.component';
 import { NgmodelComponent } from './ngmodel/ngmodel.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 
 
@@ -39,7 +41,9 @@ import { NgmodelComponent } from './ngmodel/ngmodel.component';
     NgSwitchComponent,
     NgstyleComponent,
     EventbindingComponent,
-    NgmodelComponent
+    NgmodelComponent,
+    ParentComponent,
+    ChildComponent
   ], 
   imports: [
     BrowserModule,
