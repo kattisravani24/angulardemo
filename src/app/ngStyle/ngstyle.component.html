@@ -1,0 +1,7 @@
+<h4 style="color: purple;">Welcome {{ name }}</h4>
+<h4 style = "color: peru; font-style: italic;">Welcome {{name}}</h4>
+<h4 [style.color] = 'myColor'>Welcome {{name}}</h4><!--Binding color using a variable-->
+<h4 [style.color] = "'orange'">Welcome {{name}}</h4> <!--To bind direct color use "' '"-->
+<h4 [style.color]="hasError ? 'red' : 'green'">Welcome {{name}}</h4>
+<h4 [style.color]="!hasError ? 'red' : 'green'">Welcome {{name}}</h4>
+<h4 [ngStyle]="myStyles">Welcome {{name}}</h4>

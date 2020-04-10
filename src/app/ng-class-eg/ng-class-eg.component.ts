@@ -1,61 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'ng-class-eg',
   templateUrl: './ng-class-eg.component.html',
-  styleUrls: ['./ng-class-eg.component.css']
+  styles: [`
+    .text-danger{
+      color: red;
+    }
+    .text-special{
+      font-style: italic;
+    }
+  `]
 })
-export class NgClassEgComponent implements OnInit { 
-  div;
-  movies:{name:string, movie:string}[];
-  people:{name:string, hobby:string}[];
+export class NgClassEgComponent implements OnInit{
+  classValue:string;
+  textDanger;
+  specialText;
+  messageClasses;
+  hasError:boolean;
+  constructor(){}
 
-  cartoon:string[];
-  myStyles;
-  cartoonColor:string;
-  constructor() { }
-
-  ngOnInit(): void {
-    this.div = document.querySelector('div');
-    this.div.className = 'active';
-    console.log(this.div.className);
-
-    this.cartoon = ["Tom", "Jerry", "Shinchan"];
-
-    this.movies = [{
-      name: "Prabhas",
-      movie: "Bujjigadu"
-    },
-    {
-      name: "Vishal",
-      movie: "Padem Kodi"
-    }
-    ];
-    
-    this.myStyles = {
-      color : 'purple',
-      backgroundColor: '#ddd'
-    }
-
-    this.cartoonColor = 'magenta';
-
-    this.people = [{
-      name: "Aadya",
-      hobby: "Singing"
-    },
-    {
-      name: "Aadvik",
-      hobby: "Dancing"
-    }
-    ];
-  }
-
-  getColor(hobby){
-    switch(hobby){
-      case 'Singing':
-        return 'blue';
-      case 'Dancing':
-        return 'brown'
+  ngOnInit(){
+    this.classValue = 'Text using';
+    this.hasError = true;
+    this.textDanger = 'text-danger';
+    this.specialText = 'text-special';
+    this.messageClasses = {
+      "text-success": true,
+      "text-danger": !this.textDanger,
+      "text-special": this.specialText
     }
   }
 }

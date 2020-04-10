@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'proprty-binding',
-  templateUrl: './proprty-binding.component.html',
-  styleUrls: ['./proprty-binding.component.css']
+  templateUrl: './proprty-binding.component.html'
 })
 export class ProprtyBindingComponent implements OnInit {
   imgUrl;

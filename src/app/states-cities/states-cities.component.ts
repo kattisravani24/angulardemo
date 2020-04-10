@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'states-cities',
-  templateUrl: './states-cities.component.html',
-  styleUrls: ['./states-cities.component.css']
+  templateUrl: './states-cities.component.html'
 })
 export class StatesCitiesComponent implements OnInit {
 

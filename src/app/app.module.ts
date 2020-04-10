@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 
@@ -15,7 +16,12 @@ import { WishComponent } from './wish/wish.component';
 import { StatesCitiesComponent } from './states-cities/states-cities.component';
 import { NgClassEgComponent } from './ng-class-eg/ng-class-eg.component';
 import { NgIfComponent } from './ng-if/ng-if.component';
-import { NgSwitchComponent } from './ng-switch/ng-switch.component'
+import { NgSwitchComponent } from './ng-switch/ng-switch.component';
+import { NgstyleComponent } from './ngStyle/ngstyle.component';
+import { EventbindingComponent } from './eventbinding/eventbinding.component';
+import { NgmodelComponent } from './ngmodel/ngmodel.component';
+
+
 
 @NgModule({
   declarations: [
@@ -30,12 +36,16 @@ import { NgSwitchComponent } from './ng-switch/ng-switch.component'
     StatesCitiesComponent,
     NgClassEgComponent,
     NgIfComponent,
-    NgSwitchComponent
+    NgSwitchComponent,
+    NgstyleComponent,
+    EventbindingComponent,
+    NgmodelComponent
   ], 
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AccordionModule.forRoot()
+    AccordionModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

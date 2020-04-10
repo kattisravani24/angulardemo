@@ -1,0 +1,6 @@
+<h4>Hi {{ name }}</h4>
+<button (click) = "greetMe($event)">Greet</button> <!--$event is a special variable for Angular that given all the information about the DOM event that was raised-->
+<h4>{{geeting}}</h4>
+<button (click) = "geeting = 'Welcome Malathi'">Greet</button><br/>
+<input type="text" #myInput> <!--Here #myInput is a referrence variable used to reference an html element and all of its DOM properties-->
+<button (click) = "LogValue(myInput.value)">Log</button>

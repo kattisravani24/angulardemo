@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'string-interpolation',
-  templateUrl: './string-interpolation.component.html',
-  styleUrls: ['./string-interpolation.component.css']
+  templateUrl: './string-interpolation.component.html'
 })
 export class StringInterpolationComponent implements OnInit {
   addedString;

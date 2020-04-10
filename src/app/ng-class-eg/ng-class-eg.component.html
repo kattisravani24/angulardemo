@@ -1,39 +1,6 @@
-<div [className]="'active'"></div>
-
-<!-- ngStyle Strats Here -->
-<p [ngStyle]="myStyles">Testing ngStyle for applying dynamic color</p>
-
-<ol>
-  <li *ngFor="let character of cartoon" [ngStyle]="{ color: cartoonColor }">
-    {{ character }}
-  </li>
-</ol>
-
-<!-- Applying styles using condition and for a particular element with bunch of styles-->
-<ul>
-  <li *ngFor="let item of movies" [ngStyle]="{ color: item.movie === 'Padem Kodi' ? 'green' : 'red' }">
-    <span [ngStyle]="myStyles">{{ item.name }}</span> - {{ item.movie }}
-  </li>
-</ul>
-
-<ul>
-  <li *ngFor="let person of people" [ngStyle]="{ color: getColor(person.hobby) }" >
-    {{ person.name }} - {{ person.hobby }}
-  </li>
-</ul>
-<!-- Using style.proprty -->
-<!-- <ul>
-    <li *ngFor="let person of people" [style.background-color]="getColor(person.hobby)">{{person.name}} - {{person.hobby}}</li>
-</ul> -->
-<!-- *********************************************************************************** -->
-<!-- ngClass Strats Here -->
-<ul>
-  <li *ngFor="let person of people" [ngClass]="{ 'text-success': person.hobby === 'Dancing', 'text-ifo': person.name === 'Aadya'}">  <!-- [class.text-warning] = "person.hobby === 'Singing'" -->
-    {{ person.name }} - {{ person.hobby }}
-  </li>
-</ul>
-
-<!--  doing so will replace all the other classes of this li with text-info class -->
-<p class="class1 lass2" [class]="'text-info'">Doing so will replace all the other classes of this li with text-info class </p>
-
-<p  [class.text-success]="true">Sucess Paragraph</p>
+<h2 class="text-success">{{classValue}} 'Class attribute'</h2>
+<h2 class="text-success text-special">{{classValue}}</h2>
+<h2 [class]="textDanger">{{classValue}}  'Class Binding'</h2>
+<h2 class="text-sucess" [class] = "specialText"> {{classValue}} both 'Class attribute' and 'Class Binding', which ignores the regular class applied and only the class applied using class binding will take the effect</h2>
+<h2 [class.text-danger] = "true">{{classValue}} single condition</h2>
+<h2 [ngClass]="messageClasses">{{classValue}} 'ngClass directive to aplly class based on more than one  condition'</h2>

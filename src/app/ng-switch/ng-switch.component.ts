@@ -2,8 +2,7 @@ import {Component, OnInit} from '@angular/core';
 
 @Component({
     selector: 'ng-switch',
-    templateUrl: './ng-switch.component.html',
-    styleUrls: ['./ng-switch.component.css']
+    templateUrl: './ng-switch.component.html'
 })
 
 export class NgSwitchComponent implements OnInit{
