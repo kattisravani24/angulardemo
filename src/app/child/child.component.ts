@@ -5,11 +5,12 @@ import { Component, OnInit, Input } from '@angular/core';
     templateUrl: 'child.component.html'
 })
 
-export class ChildComponent implements OnInit {
-   @Input() pData;
-   @Input() userNameFromParent:string;
+export class ChildComponent implements OnInit { 
+    @Input() pData;
+//    @Input() userNameFromParent:string;
+   @Input() childAttr:string;
     constructor() { }
-
+ 
     ngOnInit() { 
        
     }

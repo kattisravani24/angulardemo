@@ -10,10 +10,12 @@ export class ParentComponent implements OnInit {
     validLogin:boolean;
     username:string;
     password:string;
-    constructor() { }
+    parentFeild:string;
+    constructor() { } 
 
     ngOnInit() {
-        // this.name = "Aadya";
+        this.name = "Aadya";
+        this.parentFeild = "Testing";
      }
      validateUser(){
          let user = document.getElementById("#un") as HTMLInputElement; 
