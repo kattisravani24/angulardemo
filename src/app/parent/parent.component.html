@@ -1,16 +1,30 @@
+<div *ngIf="isParent">
+    <h3>We are Parents</h3>
+    <img src="./assets/parent.jpg"/><br>
+    <button (click) = "showChildren()">Children</button>
+</div>
 
+
+
+<div *ngIf="!isParent">
+    <!-- <img src="./assets/child.jpg"/> -->
+    <child [aChild] = "child"><img src="./assets/child.jpg"/></child>
+    <button (click) = "showParents()">Parents</button>
+</div>
 
 <!-- <div *ngIf="!validLogin">
 <input type="text" id="#un" placeholder="Enter Username"><br>
 <input type="password" id="#pwd" placeholder="Enter Password"><br>
 
 <button (click) = "validateUser()">Login</button>
-</div>-->
+</div>
 
+<div *ngIf="validLogin">
+    <child [userNameFromParent] = "username"></child>
+</div> -->
 
-
-<child [pData] = "name"  [childAttr] = "parentFeild"></child>
-
-<!-- <child [childAttr] = "parentFeild"></child> -->
+<!-- <child [pData] = "name" [childAttr] = "parentFeild"></child> -->
+<!-- <img src="./assets/parent.jpg"/> 
+<img src="./assets/child.jpg"/> -->
 
  

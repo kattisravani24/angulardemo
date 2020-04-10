@@ -11,11 +11,15 @@ export class ParentComponent implements OnInit {
     username:string;
     password:string;
     parentFeild:string;
+    isParent:boolean;
+    child;
     constructor() { } 
 
     ngOnInit() {
         this.name = "Aadya";
         this.parentFeild = "Testing";
+        this.isParent = true;
+        this.child = "We are Children";
      }
      validateUser(){
          let user = document.getElementById("#un") as HTMLInputElement; 
@@ -29,5 +33,11 @@ export class ParentComponent implements OnInit {
              pass.value = "";
              alert("Invalid Credentials");
          }
+     }
+     showChildren(){
+         this.isParent = false;
+     }
+     showParents(){
+         this.isParent = true;
      }
 }

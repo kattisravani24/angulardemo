@@ -9,6 +9,7 @@ export class ChildComponent implements OnInit {
     @Input() pData;
 //    @Input() userNameFromParent:string;
    @Input() childAttr:string;
+   @Input() aChild;
     constructor() { }
  
     ngOnInit() { 
