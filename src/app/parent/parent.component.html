@@ -4,11 +4,9 @@
     <button (click) = "showChildren()">Children</button>
 </div>
 
-
-
 <div *ngIf="!isParent">
     <!-- <img src="./assets/child.jpg"/> -->
-    <child [aChild] = "child"><img src="./assets/child.jpg"/></child>
+    <child [aChild] = "child"><img src="./assets/child.jpg"/></child><br>
     <button (click) = "showParents()">Parents</button>
 </div>
 
