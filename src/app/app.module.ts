@@ -22,6 +22,7 @@ import { EventbindingComponent } from './eventbinding/eventbinding.component';
 import { NgmodelComponent } from './ngmodel/ngmodel.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { NgmodelchildComponent } from './ngmodelchild/ngmodelchild.component';
 
 
 
@@ -43,7 +44,8 @@ import { ChildComponent } from './child/child.component';
     EventbindingComponent,
     NgmodelComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    NgmodelchildComponent
   ], 
   imports: [
     BrowserModule,

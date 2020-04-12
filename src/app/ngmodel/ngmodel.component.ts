@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component } from '@angular/core';
 @Component({
     selector: 'ngmodel',
-    templateUrl: './ngmodel.component.html'
+    template: `  
+                <ngmodelchild (demo)="parentDemo()"></ngmodelchild>
+             `
 })
-
-export class NgmodelComponent implements OnInit {
-    name = "";
-    constructor() { }
-    ngOnInit() { }
+export class NgmodelComponent{
+    parentDemo(){
+        console.log("Parent Demo");
+    }
 }
+ 

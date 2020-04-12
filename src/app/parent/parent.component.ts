@@ -7,21 +7,28 @@ import { Component, OnInit } from '@angular/core';
 
 export class ParentComponent implements OnInit {
     name:string;
+    /* name:string;
     validLogin:boolean;
-    username:string;
+    username:string; 
     password:string;
     parentFeild:string;
     isParent:boolean;
-    child;
+    child; */
     constructor() { } 
 
     ngOnInit() {
-        this.name = "Aadya";
+        /* this.name = "Aadya";
         this.parentFeild = "Testing";
         this.isParent = true;
-        this.child = "We are Children";
+        this.child = "We are Children"; */
      }
-     validateUser(){
+     updateName(){
+        this.name = (document.getElementById("name") as HTMLInputElement).value;
+        console.log(this.name);
+     }
+
+
+     /* validateUser(){
          let user = document.getElementById("#un") as HTMLInputElement; 
          let pass = document.getElementById("#pwd") as HTMLInputElement ; 
          if(user.value === "aadya" && pass.value === "aadya"){
@@ -39,5 +46,5 @@ export class ParentComponent implements OnInit {
      }
      showParents(){
          this.isParent = true;
-     }
+     } */
 }

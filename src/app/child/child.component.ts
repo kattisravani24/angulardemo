@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'child',
@@ -6,13 +6,20 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 
 export class ChildComponent implements OnInit { 
-    @Input() pData;
-//    @Input() userNameFromParent:string;
+    @Input() name:string;
+    @Output() nameChange = new EventEmitter();
+    /* @Input() pData;
+    @Input() userNameFromParent:string;
    @Input() childAttr:string;
-   @Input() aChild;
+   @Input() aChild; */
     constructor() { }
- 
+  
     ngOnInit() { 
        
     }
-}
+    updateChildName(){
+        this.name = (document.getElementById("child-name") as HTMLInputElement).value;
+        this.nameChange.emit(this.name);
+    }
+
+} 
