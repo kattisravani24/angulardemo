@@ -1,16 +1,14 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'ngmodelchild',
   template:  `
-              <button (click)="childDemo()">Click Me</button>
+              <ngmodelchildtwo (click)="childDemo()"></ngmodelchildtwo>
             `
 })
 export class NgmodelchildComponent{
-  @Output() demo = new EventEmitter();
+  @Output() child = new EventEmitter();
   childDemo(){
-      this.demo.emit(console.log("Child Demo"));
-      
-  }
-
+      this.child.emit(console.log("Child One Demo"));
+  } 
 } 

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'ngmodel',
     template: `  
-                <ngmodelchild (demo)="parentDemo()"></ngmodelchild>
+                <ngmodelchild (child)="parentDemo()"></ngmodelchild><br/>
              `
 })
 export class NgmodelComponent{

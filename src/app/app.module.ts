@@ -23,6 +23,7 @@ import { NgmodelComponent } from './ngmodel/ngmodel.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { NgmodelchildComponent } from './ngmodelchild/ngmodelchild.component';
+import { NgmodelchildtwoComponent } from './ngmodelchildtwo/ngmodelchildtwo.component';
 
 
 
@@ -45,7 +46,8 @@ import { NgmodelchildComponent } from './ngmodelchild/ngmodelchild.component';
     NgmodelComponent,
     ParentComponent,
     ChildComponent,
-    NgmodelchildComponent
+    NgmodelchildComponent,
+    NgmodelchildtwoComponent
   ], 
   imports: [
     BrowserModule,
