@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 
-
 import { AppComponent } from './app.component';
 import { DemoComponent } from './demo/demo.component';
 import { ManualComponent } from './manual/manual.component';
@@ -29,6 +28,12 @@ import { EmpDetailsComponent } from './emp-details/emp-details.component';
 import { EmpService } from './shared/emp.service';
 import {HttpClientModule} from '@angular/common/http';
 import { PipesComponent } from './pipes/pipes.component';
+import { AhComponent } from './ah/ah.component';
+import { ReverseStr } from './myPipes/reverseStr';
+import { ReverseArray } from './myPipes/reverseArr';
+import { RemoveDuplicates } from './myPipes/removeDups';
+import { MoviesComponent } from './movies/movies.component';
+
 
 @NgModule({
   declarations: [
@@ -53,7 +58,12 @@ import { PipesComponent } from './pipes/pipes.component';
     NgmodelchildtwoComponent,
     EmpListComponent,
     EmpDetailsComponent,
-    PipesComponent
+    PipesComponent,
+    AhComponent,
+    ReverseStr,
+    ReverseArray,
+    RemoveDuplicates,
+    MoviesComponent
   ], 
   imports: [
     BrowserModule,

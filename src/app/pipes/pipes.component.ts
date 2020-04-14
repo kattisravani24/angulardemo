@@ -10,6 +10,12 @@ export class PipesComponent implements OnInit {
   personeDetails:object;
   date: number;
   currentDate;
+  myPercent:number;
+  alpha:string;
+  numberArray:number[] = [11,22,33,44,55];
+  strArray:string[] = ["Aadya", "Malathi"];
+  numArr:number[] = [1,2,3,4,5,6,7];
+  
   constructor() { }
  
   ngOnInit(): void {
@@ -21,6 +27,8 @@ export class PipesComponent implements OnInit {
     }
     this.date = Date.now();
     this.currentDate = new Date();
+    this.myPercent = 0.25;
+    this.alpha = 'abcdefghijk';
   }
 
 }

@@ -1,0 +1,36 @@
+<div class="container">
+  <div id="moviecontainer" class="mt-5">
+    <div class="row">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Enter Movie Name" id="addMovie">
+          <div class="input-group-append">
+            <button class="btn btn-outline-success" type="button" (click)="onAddingMovie($event)">Add Movie</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4"></div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search Movie">
+          <div class="input-group-append">
+            <button class="btn btn-outline-primary" type="button">Search Movie</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4"></div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <ul class="list-group d-flex justify-content-between">
+          <li  class="list-group-item" *ngFor="let movie of movieList">{{movie}} <span class="btn btn-outline-danger mr-0" type="button">Delete</span></li>         
+        </ul>
+      </div>
+      <div class="col-sm-4"></div>
+    </div> 
+</div>

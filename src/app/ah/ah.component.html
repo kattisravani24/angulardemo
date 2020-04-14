@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>{{title}}</h1>
+<input type="text" #newitem /> <!--added a reference using #-->
+<button (click)="additem(newitem.value)" class="btn btn-success">Add</button>
+
+<table class="table bg-info">
+  <tr>
+  <th>Label</th>
+  <th>Movie</th>
+  <th>Hero</th>
+  <th>Remove</th>
+  </tr>
+  <tr *ngFor="let table of lists">
+    <td>{{table.Label}}</td>
+    <td>{{table.Movie}}</td>
+    <td>{{table.Hero}}</td>
+    <td>
+      <button (click)="deleteitem(table)" class="btn btn-danger">delete</button>
+    </td>
+  </tr>
+</table>
+</div>
+
