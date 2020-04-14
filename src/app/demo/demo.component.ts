@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../shared/common.service';
 
 @Component({
   selector: 'app-demo',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class DemoComponent implements OnInit {
-  constructor() { }
+  username:string;
+
+  constructor(private commonService:CommonService) { }
+  
   ngOnInit(): void {
+    this.username = this.commonService.getUserName();
   }
 }

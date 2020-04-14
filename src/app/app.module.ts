@@ -24,8 +24,11 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { NgmodelchildComponent } from './ngmodelchild/ngmodelchild.component';
 import { NgmodelchildtwoComponent } from './ngmodelchildtwo/ngmodelchildtwo.component';
-
-
+import { EmpListComponent } from './emp-list/emp-list.component';
+import { EmpDetailsComponent } from './emp-details/emp-details.component';
+import { EmpService } from './shared/emp.service';
+import {HttpClientModule} from '@angular/common/http';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -47,15 +50,19 @@ import { NgmodelchildtwoComponent } from './ngmodelchildtwo/ngmodelchildtwo.comp
     ParentComponent,
     ChildComponent,
     NgmodelchildComponent,
-    NgmodelchildtwoComponent
+    NgmodelchildtwoComponent,
+    EmpListComponent,
+    EmpDetailsComponent,
+    PipesComponent
   ], 
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AccordionModule.forRoot(),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [EmpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

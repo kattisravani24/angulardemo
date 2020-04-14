@@ -1,0 +1,34 @@
+<div class="m-5">
+    <!-- String Pipes -->
+    <h6>{{str | lowercase}}</h6>
+    <h6>{{str | uppercase}}</h6>
+    <h6>{{str | titlecase}}</h6>
+    <!-- Currency Pipes -->
+    <h6>{{money | currency}}</h6>
+    <h6>{{money | currency:'INR'}}</h6>
+    <h6>{{money | currency:'EUR':'code'}}</h6>
+    <h6>{{6000.2466789 | currency}}</h6>
+    <!-- Number Pipes -->
+    <h6>{{123.466 | number:'3.1-2'}}</h6>
+    <h6>{{123.466 | number:'6.1-6'}}</h6>
+    <h6>{{123.99 | number:'3.1-1'}}</h6>
+    <h6>{{123.51 | number:'3.1-1'}}</h6>
+    <!-- Json Pipe -->
+    <h6>{{ personeDetails }}</h6> <!-- Not Allowed -->
+    <h6>{{ personeDetails | json}}</h6>
+    <!-- Date Pipe -->
+    <h6>{{date}}</h6>
+    <h6>{{date | date}}</h6>
+    <h6>{{date | date:'mm/dd/yyyy'}}</h6>
+    <h6>{{date | date:'dd/mm/yyyy'}}</h6>
+    <h6>{{currentDate | date}}</h6>
+    <h6>{{currentDate | date:'short'}}</h6>
+    <h6>{{currentDate | date:'shortDate'}}</h6>
+    <h6>{{currentDate | date:'shortTime'}}</h6>
+    <h6>{{currentDate | date:'long'}}</h6>
+    <h6>{{currentDate | date:'longDate'}}</h6>
+    <h6>{{currentDate | date:'longTime'}}</h6>
+    <h6>{{currentDate | date:'medium'}}</h6>
+
+
+</div>
