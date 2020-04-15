@@ -1,62 +1,58 @@
 <div class="m-5">
-    <p>{{[1,1,2,3,3,4,4,4,4,4]}} Unique Array Elements -  {{[1,1,2,3,3,4,4,4,4,4] | removeDups}}</p>
-    <p>{{['Aadya', 'Malathi', 'Aadya', 'Malathi']}} Unique Array Elements - {{['Aadya', 'Malathi', 'Aadya', 'Malathi'] | removeDups}}</p>
-    <p>{{'malathi'}} - {{'malathi' | reverseStr}}</p>
-    <p>{{numArr | reverseArray}}</p>
-    <p>{{['Malathi', 'Aadya']}} - Reversed Array - {{['Malathi', 'Aadya'] | reverseArray}}</p>
-    
-    <h5> String Pipes </h5>
-    <p>{{str | lowercase}}</p>
-    <p>{{str | uppercase}}</p>
-    <p>{{str | titlecase}}</p>
-    <p>{{'malathi' | reverseStr}}</p>
-    <p>{{numArr | reverseArray}}</p>
-    <p>{{'Actual Array - ' + strArray}}</p>
-    <p>Reversed Array - {{strArray | reverseArray}}</p> -->
-    <p>{{str | slice:3}}</p>
-    <p>{{str | slice:11}}</p>
-    <p>{{str | slice:3:7}}</p>
-    <p>{{str | slice:3:-3}}</p> 
-
-    <p>{{alpha | slice:3:-3}}</p>
-   <!-- <h6>  a = 0 -11
-    b = 1
-    c = 2
-    d = 3
-    e=4 
-    f=5
-    g=6
-    h=7
-    i=8
-    j=9 -2
-    k=10  -1 </h6> -->
-    <h5> Currency Pipes </h5>
-    <p>{{money | currency}}</p>
-    <p>{{money | currency:'INR'}}</p>
-    <p>{{money | currency:'EUR':'code'}}</p>
-    <p>{{6000.2466789 | currency}}</p>
-    <h5> Number Pipes </h5>
-    <p>{{123.466 | number:'3.1-2'}}</p>
-    <p>{{123.466 | number:'6.1-6'}}</p>
-    <p>{{123.99 | number:'3.1-1'}}</p>
-    <p>{{123.51 | number:'3.1-1'}}</p>
-    <h5> Json Pipe </h5>
-    <p>{{ personeDetails }}</p> <h5> Not Allowed </h5>
-    <p>{{ personeDetails | json}}</p>
-    <h5> Date Pipe </h5>
-    <p>{{date}}</p>
-    <p>{{date | date}}</p>
-    <p>{{date | date:'mm/dd/yyyy'}}</p>
-    <p>{{date | date:'dd/mm/yyyy'}}</p>
-    <p>{{currentDate | date}}</p>
-    <p>{{currentDate | date:'short'}}</p>
-    <p>{{currentDate | date:'shortDate'}}</p>
-    <p>{{currentDate | date:'shortTime'}}</p>
-    <p>{{currentDate | date:'long'}}</p>
-    <p>{{currentDate | date:'longDate'}}</p>
-    <p>{{currentDate | date:'longTime'}}</p>
-    <p>{{currentDate | date:'medium'}}</p>
-    <h5> Percentage Pipes </h5>
-    <p>{{myPercent | percent}}</p>
-
+  <p>{{[1,1,2,3,3,4,4,4,4,4]}} Unique Array Elements -  {{[1,1,2,3,3,4,4,4,4,4] | removeDups}}</p>
+  <p>{{['Aadya', 'Malathi', 'Aadya', 'Malathi']}} Unique Array Elements - {{['Aadya', 'Malathi', 'Aadya', 'Malathi'] | removeDups}}</p>
+  <p>{{'malathi'}} - {{'malathi' | reverseStr}}</p>
+  <p>{{numArr | reverseArray}}</p>
+  <p>{{['Malathi', 'Aadya']}} - Reversed Array - {{['Malathi', 'Aadya'] | reverseArray}}</p>
+  <h5> String Pipes </h5>
+  <p>{{str | lowercase}}</p>
+  <p>{{str | uppercase}}</p>
+  <p>{{str | titlecase}}</p>
+  <p>{{'Actual Array - ' + strArray}}</p>
+  <p>Reversed Array - {{strArray | reverseArray}}</p> 
+  <p>{{str | slice:3}}</p>
+  <p>{{str | slice:11}}</p>
+  <p>{{str | slice:3:7}}</p>
+  <p>{{str | slice:3:-3}}</p> 
+  <p>{{alpha | slice:3:-3}}</p>
+  <!-- <h6>  
+  a = 0 - 11
+  b = 1 - 10
+  c = 2 - 9
+  d = 3 - 8
+  e = 4 - 7
+  f = 5 - 6
+  g = 6 - 5
+  h = 7 - 4
+  i = 8 - 3  
+  j = 9 - 2
+  k = 10 -1 </h6> -->
+  <h5> Currency Pipes </h5>
+  <p>{{money | currency}}</p>
+  <p>{{money | currency:'INR'}}</p>
+  <p>{{money | currency:'EUR':'code'}}</p>
+  <p>{{6000.2466789 | currency}}</p>
+  <h5> Number Pipes </h5>
+  <p>{{123.466 | number:'3.1-2'}}</p>
+  <p>{{123.466 | number:'6.1-6'}}</p>
+  <p>{{123.99 | number:'3.1-1'}}</p>
+  <p>{{123.51 | number:'3.1-1'}}</p>
+  <h5> Json Pipe </h5>
+  <p>{{ personeDetails }}</p> <h5> Not Allowed </h5>
+  <p>{{ personeDetails | json}}</p>
+  <h5> Date Pipe </h5>
+  <p>{{date}}</p>
+  <p>{{date | date}}</p>
+  <p>{{date | date:'mm/dd/yyyy'}}</p>
+  <p>{{date | date:'dd/mm/yyyy'}}</p>
+  <p>{{currentDate | date}}</p>
+  <p>{{currentDate | date:'short'}}</p>
+  <p>{{currentDate | date:'shortDate'}}</p>
+  <p>{{currentDate | date:'shortTime'}}</p>
+  <p>{{currentDate | date:'long'}}</p>
+  <p>{{currentDate | date:'longDate'}}</p>
+  <p>{{currentDate | date:'longTime'}}</p>
+  <p>{{currentDate | date:'medium'}}</p>
+  <h5> Percentage Pipes </h5>
+  <p>{{myPercent | percent}}</p>
 </div>
