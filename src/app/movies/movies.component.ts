@@ -8,9 +8,10 @@ export class MoviesComponent implements OnInit {
   movieList:string[];
   movieName:string;
   newMovie;
+  searchText:string;
   constructor() { }
   ngOnInit(): void {
-    this.movieList = ['Bujjigadu', 'Mr. Perfect', 'Darling']
+    this.movieList = ['Bujjigadu', 'Mr. Perfect', 'Ek Niranjan'];
   }
   onAddingMovie(){
     this.movieName = (document.getElementById("addMovie") as HTMLInputElement).value;
@@ -28,10 +29,9 @@ export class MoviesComponent implements OnInit {
     console.log(this.movieList.length-1);
     this.movieList.splice(i, 1)
   }
-  onSearchMovie(){
-    this.movieName = (document.getElementById("searchMovie") as HTMLInputElement).value;
-    if(this.movieName === ''){
-      alert('Enter Movie Name');
-    }
+  onSearchMovie(e){
+    console.log(e);
+   /*  this.movieName = (document.getElementById("searchMovie") as HTMLInputElement).value;*/
+    this.searchText = e; 
   }
 }

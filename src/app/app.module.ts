@@ -33,6 +33,8 @@ import { ReverseStr } from './myPipes/reverseStr';
 import { ReverseArray } from './myPipes/reverseArr';
 import { RemoveDuplicates } from './myPipes/removeDups';
 import { MoviesComponent } from './movies/movies.component';
+import { FilterPipe } from './myPipes/filterPipe';
+import { from } from 'rxjs';
 
 
 @NgModule({
@@ -63,6 +65,7 @@ import { MoviesComponent } from './movies/movies.component';
     ReverseStr,
     ReverseArray,
     RemoveDuplicates,
+    FilterPipe,
     MoviesComponent
   ], 
   imports: [

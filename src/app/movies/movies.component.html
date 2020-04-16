@@ -16,10 +16,11 @@
       <div class="col-sm-3"></div>
       <div class="col-sm-6">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Search Movie" id="searchMovie">
-          <div class="input-group-append">
-            <button class="btn btn-outline-primary" type="button" (click)="onSearchMovie()">Search Movie</button>
-          </div>
+          <input type="text" class="form-control" (keyup)="onSearchMovie($event.target.value)" placeholder="Search Movie" id="searchMovie">
+          <!-- <div class="input-group-append">
+            <button class="btn btn-outline-primary" type="button" >Search Movie</button>
+
+          </div> -->
         </div>
       </div>
       <div class="col-sm-3"></div>
@@ -28,8 +29,9 @@
       <div class="col-sm-3"></div>
       <div class="col-sm-6">
         <ul class="list-group d-flex justify-content-between">
-          <li  class="list-group-item" *ngFor="let movie of movieList; let i = index">{{movie}} <span class="btn btn-outline-danger mr-0" type="button" (click)="onDeleteMovie(i)">Delete</span></li>         
+          <li  class="list-group-item" *ngFor="let movie of movieList | filterPipe : searchText; let i = index ">{{movie}} <span class="btn btn-outline-danger mr-0" type="button" (click)="onDeleteMovie(i)">Delete</span></li>         
         </ul>
+        <p *ngIf="movieList.length === 0">No matching records found</p>
       </div>
       <div class="col-sm-3"></div>
     </div> 
