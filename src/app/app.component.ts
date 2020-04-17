@@ -12,7 +12,7 @@ export class AppComponent {
 
   validateUser(){
     let un = document.getElementById("username") as HTMLInputElement;
-    this.commonService.setUserName(un.value);
+    this.commonService.setUserName("Hi " +un.value);
     this.enableChild = true;
   }
 }

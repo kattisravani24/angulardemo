@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'ngcomponent',
-  templateUrl: './ngcomponent.component.html'
+  templateUrl: './ngcontainer.component.html'
 })
-export class NgcomponentComponent implements OnInit {
+export class NgcontainerComponent implements OnInit {
   persons: {name:string, age:number}[];
   toggleName:boolean = false;
   constructor() { }

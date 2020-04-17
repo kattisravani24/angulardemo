@@ -38,7 +38,7 @@ import { from } from 'rxjs';
 import { AddmovieComponent } from './movies/addmovie/addmovie.component';
 import { SearchmovieComponent } from './movies/searchmovie/searchmovie.component';
 import { MovielistComponent } from './movies/movielist/movielist.component';
-import { NgcomponentComponent } from './ngcomponent/ngcomponent.component';
+import { NgcontainerComponent } from './ngcontainer/ngcontainer.component';
 import { TemplatereferenceComponent } from './templatereference/templatereference.component';
 
 
@@ -75,7 +75,7 @@ import { TemplatereferenceComponent } from './templatereference/templatereferenc
     AddmovieComponent,
     SearchmovieComponent,
     MovielistComponent,
-    NgcomponentComponent,
+    NgcontainerComponent,
     TemplatereferenceComponent
   ], 
   imports: [

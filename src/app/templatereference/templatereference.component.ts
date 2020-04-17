@@ -8,9 +8,6 @@ export class TemplatereferenceComponent implements OnInit, AfterViewInit {
   @ViewChild('counter') para:ElementRef;
   @ViewChild('myH4') myHeadingTag;
   count:number;
-
-  constructor() { }
-
   ngOnInit(): void {
     console.log(this.myHeadingTag);
   }
@@ -21,6 +18,7 @@ export class TemplatereferenceComponent implements OnInit, AfterViewInit {
     this.count++;
   }
   ngAfterViewInit() {
+    console.log(this.myHeadingTag);
     const heading = this.myHeadingTag.nativeElement;
     console.log(heading.innerHTML);
     // To set heading

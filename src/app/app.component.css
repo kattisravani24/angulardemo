@@ -1,3 +1,13 @@
-h1{
-    color: rgb(184, 29, 231);
-}
+h2{
+    color: purple; 
+    background-color:#ddd;
+  } 
+body{
+    background-color:#efefef;
+  }
+  .container{
+    box-shadow: 5px 5px 5px 5px  #ddd;
+    padding: 10px;
+    border: solid 2px #ddd;
+    border-radius: 5px;
+  }
