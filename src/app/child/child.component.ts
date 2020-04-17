@@ -8,12 +8,14 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ChildComponent implements OnInit { 
     @Input() name:string;
     @Output() nameChange = new EventEmitter();
+    @Input() header;
+    @Input() body;
     /* @Input() pData;
     @Input() userNameFromParent:string;
    @Input() childAttr:string;
    @Input() aChild; */
     constructor() { }
-  
+   
     ngOnInit() { 
        
     }

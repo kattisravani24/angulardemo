@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 
 export class ParentComponent implements OnInit {
     name:string;
+    parentHead:string = "My Heading";
+    parentBody:string = "My Body";
     /* name:string;
     validLogin:boolean;
     username:string; 
@@ -15,7 +17,7 @@ export class ParentComponent implements OnInit {
     isParent:boolean;
     child; */
     constructor() { } 
-
+ 
     ngOnInit() {
         /* this.name = "Aadya";
         this.parentFeild = "Testing";

@@ -1,6 +1,8 @@
 
-<input type="text" id="name" (click)="updateName()">
-<child [(name)]="name"></child>
+<!-- <input type="text" id="name" (click)="updateName()">
+<child [(name)]="name"></child> -->
+
+<child [header] = "parentHead" [body] = "parentBody"></child>
 
 <!-- <div *ngIf="isParent">
     <h3>We are Parents</h3>

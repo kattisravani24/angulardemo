@@ -1,0 +1,14 @@
+<div class="m-5 text-danger">
+  <h5>ng-container is used to avoid an unnessary divs when working with structural directives</h5>
+  <h5>We cannot use more than one structural directive at a time on the same element</h5>
+  <button class="btn btn-outline-primary" (click) = "toggleName = !toggleName">
+    Toggle Names
+  </button>
+  <ng-container *ngIf="toggleName">
+    <ul>
+      <li *ngFor = "let person of persons">
+        {{ person.name }}
+      </li>
+    </ul>
+  </ng-container>
+</div>
