@@ -35,6 +35,9 @@ import { RemoveDuplicates } from './myPipes/removeDups';
 import { MoviesComponent } from './movies/movies.component';
 import { FilterPipe } from './myPipes/filterPipe';
 import { from } from 'rxjs';
+import { AddmovieComponent } from './movies/addmovie/addmovie.component';
+import { SearchmovieComponent } from './movies/searchmovie/searchmovie.component';
+import { MovielistComponent } from './movies/movielist/movielist.component';
 
 
 @NgModule({
@@ -66,7 +69,10 @@ import { from } from 'rxjs';
     ReverseArray,
     RemoveDuplicates,
     FilterPipe,
-    MoviesComponent
+    MoviesComponent,
+    AddmovieComponent,
+    SearchmovieComponent,
+    MovielistComponent
   ], 
   imports: [
     BrowserModule,

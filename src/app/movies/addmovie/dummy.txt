@@ -1,0 +1,14 @@
+<addmovie (parentEvent) = "parentMethod($event)"></addmovie>
+
+parentMethod(childProperty){
+    console.log(childProperty);
+  }
+
+  <button class="btn btn-outline-primary" (click)="childMethod()"></button>
+
+
+  childProperty:string = 'Am the Child Property';
+  @Output() parentEvent = new EventEmitter();
+  childMethod(){
+    this.parentMethod.emit(this.childProperty);
+  }

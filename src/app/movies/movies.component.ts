@@ -5,7 +5,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
-  movieList:string[];
+  
+  ngOnInit(): void {
+    
+  }
+  
+
+  /* movieList:string[];
   movieName:string;
   newMovie;
   searchText:string;
@@ -15,7 +21,6 @@ export class MoviesComponent implements OnInit {
   }
   onAddingMovie(){
     this.movieName = (document.getElementById("addMovie") as HTMLInputElement).value;
-    // console.log(this.movieName);
     if(this.movieName === ''){
       alert('Enter Movie Name');
     }
@@ -31,7 +36,6 @@ export class MoviesComponent implements OnInit {
   }
   onSearchMovie(e){
     console.log(e);
-   /*  this.movieName = (document.getElementById("searchMovie") as HTMLInputElement).value;*/
     this.searchText = e; 
-  }
+  } */
 }
