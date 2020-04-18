@@ -10,7 +10,8 @@ export class AddmovieComponent implements OnInit{
   @Output() movieEntered = new EventEmitter<string>();
   ngOnInit() {
   }
-  addMovie(movieInput){
+  addMovie(movieInput){ 
     this.movieEntered.emit(movieInput.value);
+    movieInput.value = "";
   }
 }

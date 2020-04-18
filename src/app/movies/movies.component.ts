@@ -13,4 +13,4 @@ export class MoviesComponent implements OnInit {
   getMovieName(event){
     this.movieToAdd = event;
   }
-}
+} 

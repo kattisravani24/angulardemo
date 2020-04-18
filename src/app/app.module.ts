@@ -40,6 +40,7 @@ import { SearchmovieComponent } from './movies/searchmovie/searchmovie.component
 import { MovielistComponent } from './movies/movielist/movielist.component';
 import { NgcontainerComponent } from './ngcontainer/ngcontainer.component';
 import { TemplatereferenceComponent } from './templatereference/templatereference.component';
+import { NgcontentComponent } from './ngcontent/ngcontent.component';
 
 
 @NgModule({
@@ -76,7 +77,8 @@ import { TemplatereferenceComponent } from './templatereference/templatereferenc
     SearchmovieComponent,
     MovielistComponent,
     NgcontainerComponent,
-    TemplatereferenceComponent
+    TemplatereferenceComponent,
+    NgcontentComponent
   ], 
   imports: [
     BrowserModule,

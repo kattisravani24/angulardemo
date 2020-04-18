@@ -7,7 +7,7 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
 })
 
 export class MovielistComponent implements OnInit, OnChanges {
-  @Input() movieList: string[];
+  @Input() movieList: string[]; 
   @Input() newMovieName:string;
   ngOnChanges() {
     if(this.newMovieName){
@@ -17,4 +17,4 @@ export class MovielistComponent implements OnInit, OnChanges {
   ngOnInit(): void {
     this.movieList = ['Eshwar', 'Bujjigadu', 'Ek Niranjan'];
   }
-}
+} 

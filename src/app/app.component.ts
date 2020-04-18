@@ -5,11 +5,10 @@ import { CommonService } from './shared/common.service';
   templateUrl: './app.component.html', 
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent{
   title = 'myFirstApp';
   enableChild:boolean;
   constructor(private commonService:CommonService) { }
-
   validateUser(){
     let un = document.getElementById("username") as HTMLInputElement;
     this.commonService.setUserName("Hi " +un.value);

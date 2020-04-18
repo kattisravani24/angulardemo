@@ -17,7 +17,7 @@ export class StatesCitiesComponent implements OnInit {
     /* this.names = ["malathi","aadya"];
     this.persons = [{name: "malathi", age: 24}, {name:"aadya", age:2}]; */
     this.myColor = "purple";
-    this.states = [{state: "Telangana", city: "Hyderabad, Warangal"}, {state:"Andhra Pradesh", city:"Amaravathi"},{state: "Arunacha Pradesh", city: "Itanagar"}, {state:"Bihar", city:"Patna"},{state: "Chhattisgarh", city: "Raipur"}, {state:"Goa", city:"Panaji"},{state: "Gujrat", city: "Gandhinagar"}, {state:"Haryana", city:"Chandigarh"},{state: "Himachal Pradesh", city: "Shimla"}, {state:"Jammu and Kashmir", city:"Srinagar and Jammu"},{state: "Jharkhad", city: "Ranchi"}, {state:"Karnataka", city:"Bengaluru"},{state: "Kerala", city: "Thiruvananthapuram"}, {state:"Madya Pradesh", city:"Bhopal"},{state: "Maharashtra", city: "Mumbai"}];
+    this.states = [{state: "Telangana", city: "Hyderabad"}, {state:"Andhra Pradesh", city:"Amaravathi"},{state: "Arunacha Pradesh", city: "Itanagar"}, {state:"Bihar", city:"Patna"},{state: "Chhattisgarh", city: "Raipur"}, {state:"Goa", city:"Panaji"},{state: "Gujrat", city: "Gandhinagar"}, {state:"Haryana", city:"Chandigarh"},{state: "Himachal Pradesh", city: "Shimla"}, {state:"Jammu and Kashmir", city:"Srinagar and Jammu"},{state: "Jharkhad", city: "Ranchi"}, {state:"Karnataka", city:"Bengaluru"},{state: "Kerala", city: "Thiruvananthapuram"}, {state:"Madya Pradesh", city:"Bhopal"},{state: "Maharashtra", city: "Mumbai"}];
     this.cars = [
       {
         "name": "MG Hector",
