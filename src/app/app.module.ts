@@ -41,6 +41,8 @@ import { MovielistComponent } from './movies/movielist/movielist.component';
 import { NgcontainerComponent } from './ngcontainer/ngcontainer.component';
 import { TemplatereferenceComponent } from './templatereference/templatereference.component';
 import { NgcontentComponent } from './ngcontent/ngcontent.component';
+import { FirstDirective } from './shared/first.directive';
+import { UseDirectiveComponent } from './shared/use-directive/use-directive.component';
 
 
 @NgModule({
@@ -78,7 +80,9 @@ import { NgcontentComponent } from './ngcontent/ngcontent.component';
     MovielistComponent,
     NgcontainerComponent,
     TemplatereferenceComponent,
-    NgcontentComponent
+    NgcontentComponent,
+    FirstDirective,
+    UseDirectiveComponent
   ], 
   imports: [
     BrowserModule,
