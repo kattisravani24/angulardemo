@@ -26,12 +26,12 @@ export class FirstDirective {
     }
   }
   titleCase(str) {
-    return str.replace(/\b\w/g, first => first.toLocaleUpperCase());
-    // str = str.toLowerCase().split(' ');
-    // for (var i = 0; i < str.length; i++) {
-    //   str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
-    // }
-    // return str.join(' ');
+    // return str.replace(/\b\w/g, first => first.toLocaleUpperCase());
+    str = str.toLowerCase().split(' ');
+    for (var i = 0; i < str.length; i++) {
+      str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+    }
+    return str.join(' ');
   }
   camelCase(str) {
     return str.replace(/\W+(.)/g, function(match, chr)
