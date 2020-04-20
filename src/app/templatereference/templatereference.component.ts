@@ -9,7 +9,7 @@ export class TemplatereferenceComponent implements OnInit, AfterViewInit {
   @ViewChild('myH4') myHeadingTag;
   count:number;
   ngOnInit(): void {
-    console.log(this.myHeadingTag);
+    // console.log(this.myHeadingTag); -> undefined
   }
   myValue(){
     console.log(this.in.nativeElement.value);

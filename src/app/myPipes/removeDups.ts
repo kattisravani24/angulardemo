@@ -3,7 +3,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({name:'removeDups'})
 export class RemoveDuplicates implements PipeTransform{
   transform(arr:any[]){
-    console.log("test")
     let i;
     let arrListLen = arr.length;
     let uniqueArr = [];
@@ -13,6 +12,5 @@ export class RemoveDuplicates implements PipeTransform{
       } 
     }
     return uniqueArr;
-
   }
 }
