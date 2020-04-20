@@ -1,6 +1,8 @@
 h2{
     color: purple; 
     background-color:#ddd;
+    padding: 0 0 5px 5px;
+    border-radius: 5px;
   } 
 body{
     background-color:#efefef;
