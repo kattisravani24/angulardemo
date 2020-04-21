@@ -9,4 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class FormComponent implements OnInit{
     constructor(){ }
     ngOnInit() {}
+    inputClicked(firstName){
+        console.log(firstName);
+    }
 }  
