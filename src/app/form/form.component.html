@@ -1,10 +1,9 @@
-<form>
+<form #myForm='ngForm' (ngSubmit)="onSubmit(myForm)">
   <div class="form-group">
     <label for="firstName">First Name</label>
     <input 
       type="text" 
       class="form-control" 
-      id="firstName" 
       placeholder="Enter First Name"
       autocomplete="off"
       name="firstName"
@@ -13,7 +12,7 @@
       required
       minlength="3"
       pattern="^[A-Za-z -]+$"
-      (blur)='inputClicked(firstName)'
+      (blur)='inputFn(firstName)'
       >
       <div class="alert alert-danger" *ngIf="firstName.invalid && firstName.touched">
         <div *ngIf="firstName.errors.required">First Name is Required</div>
@@ -23,12 +22,76 @@
   </div>
   <div class="form-group">
     <label for="lastName">Last Name</label>
-    <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name">
-  </div>
+    <input 
+      type="text" 
+      class="form-control" 
+      placeholder="Enter Last Name"
+      autocomplete="off"
+      required
+      name="lastName"
+      ngModel
+      #lastName='ngModel' 
+      (blur)='inputLn(lastName)'
+      minlength="3"
+      pattern="^[A-Za-z -]+$">
+      <div class="alert alert-danger" *ngIf="lastName.invalid && lastName.touched">
+        <div *ngIf="lastName.errors.required">Last Name is Required</div>
+        <div *ngIf="lastName.errors.minlength">Should be atleast 8 characters</div>
+        <div *ngIf="lastName.errors.pattern">No numeric or symbols are allowed</div>
+      </div>
+  </div> 
+  
+  <!-- <div class="form-group"> 
+    <label for="gender" class="control-label">Gender</label>
+    <div class="form-control">
+      <label class="radio-inline">
+        <input 
+          type="radio" 
+          name="gender"
+          required
+          ngModel
+          #gender='ngModel'
+          >Female 
+      </label>
+      <label class="radio-inline">
+        <input 
+          type="radio" 
+          name="gender"
+          required
+          ngModel
+          #gender='ngModel'
+          >Male
+      </label>
+    </div>
+      <div class="alert alert-danger">
+        Please select your gender
+      </div>
+  </div> 
+  <div class="form-group">
+    <div class="form-control">
+      <label for="hobbies" class="checkbox-inline">
+        <input type="checkbox" name="hobby"> Singing
+        <input type="checkbox" name="hobby"> Dancing
+        <input type="checkbox" name="hobby"> Painting
+      </label>
+    </div>
+  </div> -->
   <div class="form-group">
     <label for="comments">Comments</label>
-    <textarea cols="10" rows="10" class="form-control" id="comments" placeholder="Comments"></textarea>
+    <textarea 
+      cols="10" 
+      rows="10" 
+      class="form-control" 
+      placeholder="Comments"
+      required
+      name="comments"
+      ngModel 
+      #comments='ngModel'
+      minlength='10'
+      (blur)='inputComments(comments)'></textarea>
+      <div class="alert alert-danger" *ngIf="comments.invalid && comments.touched">
+        <div *ngIf="comments.errors.required">Comments are Required</div>
+      </div>
   </div>
-  
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">Submit</button>
 </form> 
