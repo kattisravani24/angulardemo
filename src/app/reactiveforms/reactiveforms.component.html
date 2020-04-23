@@ -1,0 +1,35 @@
+<form [formGroup]='myForm'>
+  <div class="form-group">
+    <label>Username</label>
+    <input 
+      class="form-control" 
+      type="text"
+      placeholder="Enter Username"
+      name="username"
+      formControlName='username'
+      autocomplete="off"
+      >
+      <div class="text-danger" *ngIf="username.touched && username.invalid">
+        <div *ngIf="username.errors.required">First Name is Required</div>
+        <div *ngIf="username.errors.minlength">Should be atleast 3 characters</div>
+        <!-- <small *ngIf="username.errors.divisibleByTwo">Should be divisible by two</small> -->
+        <small *ngIf="username.errors.pattern">Only alphabets are allowed</small>
+      </div>
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input 
+      class="form-control" 
+      type="password" 
+      placeholder="Enter Password"
+      name="password"
+      formControlName='password'
+      >
+      <div class="text-danger" *ngIf="password.touched && password.invalid">
+        <div *ngIf="password.errors.required">Password is Required</div>
+        <div *ngIf="password.errors.minlength">Should be atleast 8 characters</div>
+        <!-- <small *ngIf="username.errors.divisibleByTwo">Should be divisible by two</small> -->
+      </div>
+  </div>
+  <button class="btn btn-primary" [disabled]= "myForm.invalid">Login</button>
+</form>

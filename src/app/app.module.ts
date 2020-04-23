@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 
@@ -34,7 +34,6 @@ import { ReverseArray } from './myPipes/reverseArr';
 import { RemoveDuplicates } from './myPipes/removeDups';
 import { MoviesComponent } from './movies/movies.component';
 import { FilterPipe } from './myPipes/filterPipe';
-import { from } from 'rxjs';
 import { AddmovieComponent } from './movies/addmovie/addmovie.component';
 import { SearchmovieComponent } from './movies/searchmovie/searchmovie.component';
 import { MovielistComponent } from './movies/movielist/movielist.component';
@@ -43,6 +42,7 @@ import { TemplatereferenceComponent } from './templatereference/templatereferenc
 import { NgcontentComponent } from './ngcontent/ngcontent.component';
 import { FirstDirective } from './shared/first.directive';
 import { UseDirectiveComponent } from './shared/use-directive/use-directive.component';
+import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
 
 
 @NgModule({
@@ -82,13 +82,15 @@ import { UseDirectiveComponent } from './shared/use-directive/use-directive.comp
     TemplatereferenceComponent,
     NgcontentComponent,
     FirstDirective,
-    UseDirectiveComponent
+    UseDirectiveComponent,
+    ReactiveformsComponent
   ], 
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AccordionModule.forRoot(),
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [EmpService],

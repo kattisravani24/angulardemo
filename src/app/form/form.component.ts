@@ -9,16 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class FormComponent implements OnInit{
     constructor(){ }
     ngOnInit() {}
-    inputFn(firstName){
-        console.log(firstName);
+    inputControl(value){
+        console.log(value);
     }
-    inputLn(lastName){
-        console.log(lastName);
-    }
-    inputComments(comments){
-        console.log(comments);
-    }
+    
     onSubmit(myForm){
-        console.log(myForm);
+        console.log(myForm.value);
     }
 }  

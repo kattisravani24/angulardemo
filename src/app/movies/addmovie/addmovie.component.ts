@@ -14,4 +14,4 @@ export class AddmovieComponent implements OnInit{
     this.movieEntered.emit(movieInput.value);
     movieInput.value = "";
   }
-}
+} 

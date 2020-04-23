@@ -12,7 +12,7 @@
       required
       minlength="3"
       pattern="^[A-Za-z -]+$"
-      (blur)='inputFn(firstName)'
+      (blur)='inputControl(firstName)'
       >
       <div class="alert alert-danger" *ngIf="firstName.invalid && firstName.touched">
         <div *ngIf="firstName.errors.required">First Name is Required</div>
@@ -31,7 +31,7 @@
       name="lastName"
       ngModel
       #lastName='ngModel' 
-      (blur)='inputLn(lastName)'
+      (blur)='inputControl(lastName)'
       minlength="3"
       pattern="^[A-Za-z -]+$">
       <div class="alert alert-danger" *ngIf="lastName.invalid && lastName.touched">
@@ -40,39 +40,22 @@
         <div *ngIf="lastName.errors.pattern">No numeric or symbols are allowed</div>
       </div>
   </div> 
-  
-  <!-- <div class="form-group"> 
-    <label for="gender" class="control-label">Gender</label>
+  <!-- <div class="form-group">
+    <label>Gender</label>
     <div class="form-control">
       <label class="radio-inline">
         <input 
-          type="radio" 
-          name="gender"
-          required
-          ngModel
-          #gender='ngModel'
-          >Female 
+        type="radio" 
+        name="gender"
+        required
+        >Female
       </label>
       <label class="radio-inline">
         <input 
-          type="radio" 
-          name="gender"
-          required
-          ngModel
-          #gender='ngModel'
-          >Male
-      </label>
-    </div>
-      <div class="alert alert-danger">
-        Please select your gender
-      </div>
-  </div> 
-  <div class="form-group">
-    <div class="form-control">
-      <label for="hobbies" class="checkbox-inline">
-        <input type="checkbox" name="hobby"> Singing
-        <input type="checkbox" name="hobby"> Dancing
-        <input type="checkbox" name="hobby"> Painting
+        type="radio" 
+        name="gender"
+        required
+        >Male
       </label>
     </div>
   </div> -->
@@ -88,10 +71,16 @@
       ngModel 
       #comments='ngModel'
       minlength='10'
-      (blur)='inputComments(comments)'></textarea>
+      (blur)='inputControl(comments)'></textarea>
       <div class="alert alert-danger" *ngIf="comments.invalid && comments.touched">
         <div *ngIf="comments.errors.required">Comments are Required</div>
       </div>
   </div>
-  <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">Submit</button>
+  
+  <div class="form-check">
+    <input type="checkbox" required class="form-check-input" name="terms" ngModel>
+    <label class="form-check-label" for="Agree T&C">Agree T&C</label>
+  </div>
+
+  <button type="submit" class="btn btn-primary mt='5'" [disabled]="myForm.invalid">Submit</button>
 </form> 
