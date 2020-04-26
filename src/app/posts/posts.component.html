@@ -6,6 +6,7 @@
   
   <div *ngIf="show">
     <select class="custom-select" #selectUserId (change)="filterPosts(selectUserId)">
+      <option>Select User Id</option>
       <option *ngFor="let id of ids">{{ id }}</option>
     </select>
   </div>
@@ -20,15 +21,31 @@
     />
   <!--To show waiting message while proccessing-->
   <span class="text-info" *ngIf="showSpinner">Please Wait...</span>
-  <ul class="list-group">
-    <!--To iterate over posts and display them-->
-    <li class="list-group-item" *ngFor="let post of posts">
-      <button class="btn btn-default btn-sm" (click)="deletePost(post)">
-        <span class="text-danger">&times;</span>
-      </button>
-      {{ post.title }}
-      <!--To show waiting message while proccessing-->
-      <span class="text-info" *ngIf="post.showSpinner">Please Wait...</span>
-    </li>
-  </ul>
+  <div *ngIf="!show">
+    <ul class="list-group">
+      <!--To iterate over posts and display them-->
+      <li class="list-group-item" *ngFor="let post of posts">
+        <button class="btn btn-default btn-sm" (click)="deletePost(post)">
+          <span class="text-danger">&times;</span>
+        </button>
+        {{ post.title }}
+        <!--To show waiting message while proccessing-->
+        <span class="text-info" *ngIf="post.showSpinner">Please Wait...</span>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="show">
+    <ul class="list-group">
+      <!--To iterate over posts and display them-->
+      <li class="list-group-item" *ngFor="let post of posts">
+        <button class="btn btn-default btn-sm" (click)="deletePost(post)">
+          <span class="text-danger">&times;</span>
+        </button>
+        {{ post.id }}
+        <!--To show waiting message while proccessing-->
+        <span class="text-info" *ngIf="post.showSpinner">Please Wait...</span>
+      </li>
+    </ul>
+  </div>
+  
 </div>

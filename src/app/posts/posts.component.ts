@@ -38,7 +38,6 @@ export class PostsComponent implements OnInit {
   filterPosts(selectUserId){
     this.service.filterPosts(selectUserId).subscribe(res => {
       this.posts = res;
-      console.log(this.posts);
     })
   }
   
