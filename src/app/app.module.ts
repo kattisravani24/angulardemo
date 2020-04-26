@@ -43,6 +43,7 @@ import { NgcontentComponent } from './ngcontent/ngcontent.component';
 import { FirstDirective } from './shared/first.directive';
 import { UseDirectiveComponent } from './shared/use-directive/use-directive.component';
 import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
+import { PostsComponent } from './posts/posts.component';
 
 
 @NgModule({
@@ -83,7 +84,8 @@ import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component'
     NgcontentComponent,
     FirstDirective,
     UseDirectiveComponent,
-    ReactiveformsComponent
+    ReactiveformsComponent,
+    PostsComponent
   ], 
   imports: [
     BrowserModule,

@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input" id="customSwitch1" (click)="toggle()">
+    <label class="custom-control-label" for="customSwitch1">Get Posts based on User IDs</label>
+  </div>
+  
+  <div *ngIf="show">
+    <select class="custom-select" #selectUserId (change)="filterPosts(selectUserId)">
+      <option *ngFor="let id of ids">{{ id }}</option>
+    </select>
+  </div>
+
+  <!--Input feild to take the new post entry-->
+  <input 
+    type="text" 
+    #newTitle 
+    class="form-control" 
+    placeholder="Add Title" 
+    (keyup.enter)="addTitle(newTitle)"
+    />
+  <!--To show waiting message while proccessing-->
+  <span class="text-info" *ngIf="showSpinner">Please Wait...</span>
+  <ul class="list-group">
+    <!--To iterate over posts and display them-->
+    <li class="list-group-item" *ngFor="let post of posts">
+      <button class="btn btn-default btn-sm" (click)="deletePost(post)">
+        <span class="text-danger">&times;</span>
+      </button>
+      {{ post.title }}
+      <!--To show waiting message while proccessing-->
+      <span class="text-info" *ngIf="post.showSpinner">Please Wait...</span>
+    </li>
+  </ul>
+</div>
