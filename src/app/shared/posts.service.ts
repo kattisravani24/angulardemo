@@ -5,13 +5,13 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class PostsService {
-  //Url to get the Mock API
-  url:string = 'https://jsonplaceholder.typicode.com/posts';
 
-  fetchUrl:string = 'https://jsonplaceholder.typicode.com/posts?userId=';
+  url:string = 'https://jsonplaceholder.typicode.com/posts'; // To get the Mock API
 
+  fetchUrl:string = 'https://jsonplaceholder.typicode.com/posts?userId='; // To get the Mock API
   
   constructor(private http:HttpClient) { }
+  
 
   /**
    * Get posts from Mock API
@@ -32,13 +32,21 @@ export class PostsService {
   /**
    * Adding new post to the top of the array
    * @param newTitle 
-   * @autor Malathi
+   * @author Malathi
    */
   createPosts(newTitle: HTMLInputElement){
-    let reqObj = { title: newTitle.value}
+    let reqObj = 
+              { 
+                title: newTitle.value
+              }
     return this.http.post(this.url, reqObj);
   }
 
+  /**
+   * To filter the posts with selected User ID
+   * @param selectUserId - To get User ID
+   * @author Malathi
+   */
   filterPosts(selectUserId){
     return this.http.get(this.fetchUrl + selectUserId.value);
   }

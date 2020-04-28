@@ -44,6 +44,12 @@ import { FirstDirective } from './shared/first.directive';
 import { UseDirectiveComponent } from './shared/use-directive/use-directive.component';
 import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
 import { PostsComponent } from './posts/posts.component';
+import { ChartholderComponent } from './chartholder/chartholder.component';
+import { PiechartComponent } from './charts/piechart/piechart.component';
+import { WordcloudComponent } from './charts/wordcloud/wordcloud.component';
+import { MapComponent } from './charts/map/map.component';
+import { ColumnbarComponent } from './charts/columnbar/columnbar.component';
+import { TreeComponent } from './charts/tree/tree.component';
 
 
 @NgModule({
@@ -85,7 +91,13 @@ import { PostsComponent } from './posts/posts.component';
     FirstDirective,
     UseDirectiveComponent,
     ReactiveformsComponent,
-    PostsComponent
+    PostsComponent,
+    ChartholderComponent,
+    PiechartComponent,
+    WordcloudComponent,
+    MapComponent,
+    ColumnbarComponent,
+    TreeComponent
   ], 
   imports: [
     BrowserModule,

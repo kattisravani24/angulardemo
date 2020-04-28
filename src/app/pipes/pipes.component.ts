@@ -13,7 +13,7 @@ export class PipesComponent implements OnInit {
   myPercent:number;
   alpha:string;
   numberArray:number[] = [11,22,33,44,55];
-  strArray:string[] = ["Aadya", "Malathi"];
+  // strArray:string[] = ["Aadya", "Malathi"];
   numArr:number[] = [1,2,3,4,5,6,7];
   
   constructor() { }

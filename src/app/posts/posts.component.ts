@@ -7,8 +7,8 @@ import { PostsService } from '../shared/posts.service';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-  
   posts:any;
+  allPosts:any;
   showSpinner:boolean;
   ids:number[];
   show:boolean = false;
@@ -24,6 +24,7 @@ export class PostsComponent implements OnInit {
     // Subscribe to get posts response
     this.service.getPosts().subscribe(res => {
       this.posts = res;
+      this.allPosts = res;
       this.posts.forEach(val => {
         val.showSpinner = false;
       });
@@ -69,7 +70,11 @@ export class PostsComponent implements OnInit {
     })
   }
 
+  /**
+   * To toggle boolean value 'show' 
+   */
   toggle(){
     this.show = !this.show;
+    this.posts = this.allPosts;
   }
 }

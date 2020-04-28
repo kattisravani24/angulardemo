@@ -12,15 +12,15 @@ export class TemplatereferenceComponent implements OnInit, AfterViewInit {
     // console.log(this.myHeadingTag); -> undefined
   }
   myValue(){
-    console.log(this.in.nativeElement.value);
+    //console.log(this.in.nativeElement.value);
   }
   inCounter(){
     this.count++;
   }
   ngAfterViewInit() {
-    console.log(this.myHeadingTag);
+    // console.log(this.myHeadingTag);
     const heading = this.myHeadingTag.nativeElement;
-    console.log(heading.innerHTML);
+    // console.log(heading.innerHTML);
     // To set heading
     //this.myHeadingTag.nativeElement.innerHTML = "New Heading"; 
   }

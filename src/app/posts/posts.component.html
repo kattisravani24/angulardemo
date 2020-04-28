@@ -1,16 +1,19 @@
 <div class="container">
+
+  <!--Switch to toggle Select options -->
   <div class="custom-control custom-switch">
     <input type="checkbox" class="custom-control-input" id="customSwitch1" (click)="toggle()">
     <label class="custom-control-label" for="customSwitch1">Get Posts based on User IDs</label>
   </div>
   
-  <div *ngIf="show">
+  <!--To display select options-->
+  <div *ngIf="show"> 
     <select class="custom-select" #selectUserId (change)="filterPosts(selectUserId)">
       <option>Select User Id</option>
-      <option *ngFor="let id of ids">{{ id }}</option>
+      <option *ngFor="let id of ids">
+        {{ id }}</option>
     </select>
   </div>
-
   <!--Input feild to take the new post entry-->
   <input 
     type="text" 
@@ -19,11 +22,24 @@
     placeholder="Add Title" 
     (keyup.enter)="addTitle(newTitle)"
     />
-  <!--To show waiting message while proccessing-->
+  <!--Message to show while proccessing-->
   <span class="text-info" *ngIf="showSpinner">Please Wait...</span>
   <div *ngIf="!show">
     <ul class="list-group">
-      <!--To iterate over posts and display them-->
+      <!--To iterate over posts and display Post Title-->
+      <li class="list-group-item" *ngFor="let post of posts">
+        <button class="btn btn-default btn-sm" (click)="deletePost(post)">
+          <span class="text-danger">&times;</span>
+        </button>
+        {{ post.title }}
+        <!--Message to show while proccessing-->
+        <span class="text-info" *ngIf="post.showSpinner">Please Wait...</span>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="show">
+    <ul class="list-group">
+      <!--To iterate over posts and display post ID-->
       <li class="list-group-item" *ngFor="let post of posts">
         <button class="btn btn-default btn-sm" (click)="deletePost(post)">
           <span class="text-danger">&times;</span>
@@ -34,18 +50,4 @@
       </li>
     </ul>
   </div>
-  <div *ngIf="show">
-    <ul class="list-group">
-      <!--To iterate over posts and display them-->
-      <li class="list-group-item" *ngFor="let post of posts">
-        <button class="btn btn-default btn-sm" (click)="deletePost(post)">
-          <span class="text-danger">&times;</span>
-        </button>
-        {{ post.id }}
-        <!--To show waiting message while proccessing-->
-        <span class="text-info" *ngIf="post.showSpinner">Please Wait...</span>
-      </li>
-    </ul>
-  </div>
-  
 </div>

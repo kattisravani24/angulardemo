@@ -26,11 +26,15 @@ export class StatesCitiesComponent implements OnInit {
       {
         state:"Andhra Pradesh", 
         city:"Amaravathi"
-      },
+      }, 
       {
         state: "Arunacha Pradesh", 
         city: "Itanagar"
-      }, {state:"Bihar", city:"Patna"},{state: "Chhattisgarh", city: "Raipur"}, {state:"Goa", city:"Panaji"},{state: "Gujrat", city: "Gandhinagar"}, {state:"Haryana", city:"Chandigarh"},{state: "Himachal Pradesh", city: "Shimla"}, {state:"Jammu and Kashmir", city:"Srinagar and Jammu"},{state: "Jharkhad", city: "Ranchi"}, {state:"Karnataka", city:"Bengaluru"},{state: "Kerala", city: "Thiruvananthapuram"}, {state:"Madya Pradesh", city:"Bhopal"},{state: "Maharashtra", city: "Mumbai"}];
+      }
+    ];
+    /*
+      , {state:"Bihar", city:"Patna"},{state: "Chhattisgarh", city: "Raipur"}, {state:"Goa", city:"Panaji"},{state: "Gujrat", city: "Gandhinagar"}, {state:"Haryana", city:"Chandigarh"},{state: "Himachal Pradesh", city: "Shimla"}, {state:"Jammu and Kashmir", city:"Srinagar and Jammu"},{state: "Jharkhad", city: "Ranchi"}, {state:"Karnataka", city:"Bengaluru"},{state: "Kerala", city: "Thiruvananthapuram"}, {state:"Madya Pradesh", city:"Bhopal"},{state: "Maharashtra", city: "Mumbai"}
+    */
     this.cars = [
       {
         "name": "MG Hector",
