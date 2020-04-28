@@ -13,7 +13,7 @@ export class PiechartComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    let chart = am4core.create("chartdiv", am4charts.PieChart);
+    let chart = am4core.create("piechart", am4charts.PieChart);
     chart.legend = new am4charts.Legend();
     
     let pieSeries = chart.series.push(new am4charts.PieSeries());

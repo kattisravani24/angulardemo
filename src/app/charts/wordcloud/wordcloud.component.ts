@@ -13,7 +13,7 @@ export class WordcloudComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    let wordcloud = am4core.create("chartdiv", am4plugins_wordCloud.WordCloud);
+    let wordcloud = am4core.create("wordcloudchart", am4plugins_wordCloud.WordCloud);
     let wordseries = wordcloud.series.push(new am4plugins_wordCloud.WordCloudSeries());
     
     wordseries.accuracy = 4;
@@ -24,7 +24,7 @@ export class WordcloudComponent implements OnInit {
     wordseries.labels.template.margin(4,4,4,4);
     wordseries.maxFontSize = am4core.percent(30);
     
-    wordseries.text = "Though yet of Hamlet our dear brother's death The memory be green, and that it us befitted To bear our hearts in grief artier, cousin, and our son."; 
+    wordseries.text = "Aadya Aadvik Malathi Music Song Lyrics Charanam Pallavi Thalam Gaanam Saregama Guiter Rythm Aadyaa Aadvika Malathia Musica Songa Lyricsa Charanama Pallavia Thalama Gaanama Saregamaa Guitera Rythma"; 
      
   }
 

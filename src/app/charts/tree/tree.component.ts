@@ -602,7 +602,7 @@ export class TreeComponent implements OnInit {
     
     
     // create chart
-    let container = am4core.create("chartdiv", am4core.Container);
+    let container = am4core.create("treechart", am4core.Container);
     container.width = am4core.percent(100);
     container.height = am4core.percent(100);
     container.layout = "vertical";

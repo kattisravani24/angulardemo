@@ -13,7 +13,7 @@ export class ColumnbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    let chart = am4core.create("chartdiv", am4charts.XYChart);
+    let chart = am4core.create("columnchart", am4charts.XYChart);
     chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
     chart.paddingBottom = 30;
