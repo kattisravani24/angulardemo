@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
-import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 
 @Component({
   selector: 'piechart', 
@@ -20,7 +19,7 @@ export class PiechartComponent implements OnInit {
     pieSeries.dataFields.value = "litres";
     pieSeries.dataFields.category = "country";
     pieSeries.innerRadius = am4core.percent(40);
-    pieSeries.ticks.template.disabled = true;
+    // pieSeries.ticks.template.disabled = true;
     pieSeries.labels.template.disabled = true;
 
     let rgm = new am4core.RadialGradientModifier();
@@ -34,7 +33,7 @@ export class PiechartComponent implements OnInit {
     pieSeries.dataFields.category = "country";
 
     chart.data = [{
-      "country": "Lithuania",
+      "country": "India",
       "litres": 501.9
     }, {
       "country": "Czech Republic",

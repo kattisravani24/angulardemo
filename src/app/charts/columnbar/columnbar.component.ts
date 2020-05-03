@@ -1,24 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
-import am4themes_animated from "@amcharts/amcharts4/themes/animated";
-
 @Component({
   selector: 'columnbar',
   templateUrl: './columnbar.component.html',
   styleUrls: ['./columnbar.component.css']
 })
 export class ColumnbarComponent implements OnInit {
-
   constructor() { }
-
   ngOnInit(): void {
     let chart = am4core.create("columnchart", am4charts.XYChart);
     chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
-
     chart.paddingBottom = 30;
-
-    chart.data = 
+    chart.data =  
     [{
         "name": "Monica",
         "steps": 45688,
@@ -100,8 +94,6 @@ image.height = 60;
 image.horizontalCenter = "middle";
 image.verticalCenter = "middle";
 image.propertyFields.href = "href";
-
-
   }
 
 }

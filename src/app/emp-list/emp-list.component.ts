@@ -15,5 +15,5 @@ export class EmpListComponent implements OnInit {
     this._empService.getEmployees()
     .subscribe(data => this.employees = data);
   }
-
+ 
 }

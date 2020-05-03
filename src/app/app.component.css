@@ -8,7 +8,7 @@ body{
     background-color:#fff;
   }
   .container{
-    box-shadow: 5px 5px 5px 5px  #ddd;
+    box-shadow: 2px  #ddd;
     padding: 10px;
     border: solid 2px #ddd;
     border-radius: 5px;

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 // import { UserNameValidator } from './myError';
-
 @Component({
   selector: 'reactiveforms',
   templateUrl: './reactiveforms.component.html',
@@ -26,13 +25,10 @@ export class ReactiveformsComponent implements OnInit {
         Validators.minLength(8)])
     })
   }
-
   get username(){
     return this.myForm.get('username');
   }
-
   get password(){
     return this.myForm.get('password');
   }
-
 }

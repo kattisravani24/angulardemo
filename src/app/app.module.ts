@@ -2,7 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AccordionModule } from 'ngx-bootstrap/accordion';
+//import { AccordionModule } from 'ngx-bootstrap/accordion';
+
+import { EmpService } from './shared/emp.service';
+import { DisplayService } from './shared/display.service';
+
 
 import { AppComponent } from './app.component';
 import { DemoComponent } from './demo/demo.component';
@@ -25,7 +29,6 @@ import { NgmodelchildComponent } from './ngmodelchild/ngmodelchild.component';
 import { NgmodelchildtwoComponent } from './ngmodelchildtwo/ngmodelchildtwo.component';
 import { EmpListComponent } from './emp-list/emp-list.component';
 import { EmpDetailsComponent } from './emp-details/emp-details.component';
-import { EmpService } from './shared/emp.service';
 import {HttpClientModule} from '@angular/common/http';
 import { PipesComponent } from './pipes/pipes.component';
 import { AhComponent } from './ah/ah.component';
@@ -50,6 +53,21 @@ import { WordcloudComponent } from './charts/wordcloud/wordcloud.component';
 import { MapComponent } from './charts/map/map.component';
 import { ColumnbarComponent } from './charts/columnbar/columnbar.component';
 import { TreeComponent } from './charts/tree/tree.component';
+import { FormemitterComponent } from './formemitter/formemitter.component';
+import { FormlistenerComponent } from './formlistener/formlistener.component';
+import { PrimecomponentsComponent } from './PrimeNG/primecomponents/primecomponents.component';
+
+//PrimeNG
+import {CheckboxModule} from 'primeng/checkbox';
+import {TableModule} from 'primeng/table';
+import {OrderListModule} from 'primeng/orderlist';
+import {AccordionModule} from 'primeng/accordion';
+import {CardModule} from 'primeng/card';
+import {CarouselModule} from 'primeng/carousel';
+
+import {RouterModule} from '@angular/router';
+import { NavbarComponent } from './navbar/navbar.component';
+import { UsingdisplayComponent } from './usingdisplay/usingdisplay.component'
 
 
 @NgModule({
@@ -97,18 +115,51 @@ import { TreeComponent } from './charts/tree/tree.component';
     WordcloudComponent,
     MapComponent,
     ColumnbarComponent,
-    TreeComponent
+    TreeComponent,
+    FormemitterComponent,
+    FormlistenerComponent,
+    PrimecomponentsComponent,
+    NavbarComponent,
+    UsingdisplayComponent
   ], 
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AccordionModule.forRoot(),
+    //AccordionModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule, 
+    // PrimeNG Modules
+    CheckboxModule,
+    TableModule,
+    OrderListModule,
+    AccordionModule,
+    CardModule,
+    CarouselModule,
+    RouterModule.forRoot([
+      {
+        path: 'pipes',
+        component: PipesComponent
+      },
+      {
+        path: 'posts',
+        component: PostsComponent
+      },
+      {
+        path: 'wish',
+        component: WishComponent
+      },
+      {
+        path: 'chart',
+        component: ChartholderComponent
+      },
+      {
+        path:'form',
+        component:FormComponent
+      }
+    ])
   ],
-  providers: [EmpService],
+  providers: [EmpService, DisplayService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
